@@ -1,0 +1,51 @@
+<nz-layout class="app-layout">
+  <nz-sider class="menu-sidebar"
+    nzCollapsible
+    nzWidth="256px"
+    nzBreakpoint="md"
+    [(nzCollapsed)]="isCollapsed"
+    [nzTrigger]="null"
+  >
+    <div class="sidebar-logo">
+      
+        <h1>oneIT2</h1>
+      
+    </div>
+    <ul nz-menu nzTheme="dark" nzMode="inline" [nzInlineCollapsed]="isCollapsed">
+
+
+       <li nz-menu-item [routerLink]="'/dashboard'" routerLinkActive="ant-menu-item-selected">
+         <nz-icon nzType="dashboard" />
+          <span>
+           Dashboard
+          </span>
+        </li>
+      
+      <li nz-menu-item [routerLink]="'/profile'" routerLinkActive="ant-menu-item-selected">
+         <nz-icon nzType="user"/>
+          <span>
+           Profile
+          </span>
+      </li>
+
+
+      
+    </ul>
+  </nz-sider>
+  <nz-layout>
+    <nz-header>
+      <div class="app-header">
+        <span class="header-trigger" (click)="isCollapsed = !isCollapsed">
+          <nz-icon class="trigger" [nzType]="isCollapsed ? 'menu-unfold' : 'menu-fold'" />
+        </span>
+      </div>
+    </nz-header>
+    <nz-content>
+      <div class="inner-content">
+
+        <router-outlet></router-outlet>
+        
+      </div>
+    </nz-content>
+  </nz-layout>
+</nz-layout>
