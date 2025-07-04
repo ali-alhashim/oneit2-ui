@@ -10,6 +10,8 @@ import { DevicesPage } from './pages/devices/devices';
 import { AssetsPage } from './pages/assets/assets';
 import { TicketsPage } from './pages/tickets/tickets';
 import { UsersPage } from './pages/users/users';
+import { LogsPage } from './pages/logs/logs';
+import { IncidencesPage } from './pages/incidences/incidences';
 
 export const routes: Routes = [
   {
@@ -22,7 +24,9 @@ export const routes: Routes = [
       {path: 'devices', component: DevicesPage},
       {path: 'asstes', component: AssetsPage},
       {path: 'tickets', component:TicketsPage},
-      {path: 'users', component:UsersPage}
+      {path: 'users', component:UsersPage},
+      {path: 'logs', component:LogsPage},
+      {path: 'incidences', component:IncidencesPage}
     ]
   },
   {

@@ -1,1 +1,22 @@
-<p>profile works!</p>
+<nz-card nzTitle="User Profile" [nzBordered]="false" class="profile-card">
+  <div class="profile-header">
+    <nz-avatar [nzSrc]="'/assets/avatar.png'" nzSize="large"></nz-avatar>
+    <div class="profile-name">
+      <h3>{{ user.fullName }}</h3>
+      <p>{{ user.role }}</p>
+    </div>
+  </div>
+
+  <nz-descriptions nzTitle="User Information" nzBordered>
+    <nz-descriptions-item nzTitle="Username">{{ user.username }}</nz-descriptions-item>
+    <nz-descriptions-item nzTitle="Email">{{ user.email }}</nz-descriptions-item>
+    <nz-descriptions-item nzTitle="Phone">{{ user.phone || 'N/A' }}</nz-descriptions-item>
+    <nz-descriptions-item nzTitle="Department">{{ user.department || 'N/A' }}</nz-descriptions-item>
+  </nz-descriptions>
+
+  <div class="profile-actions mt-4">
+    <button nz-button nzType="primary" (click)="editProfile()">Edit Profile</button>
+    <button nz-button nzType="default" (click)="changePassword()">Change Password</button>
+  </div>
+</nz-card>
+

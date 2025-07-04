@@ -1,0 +1,16 @@
+.profile-card {
+  max-width: 800px;
+  margin: auto;
+}
+.profile-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+.profile-name h3 {
+  margin: 0;
+}
+.mt-4 {
+  margin-top: 1.5rem;
+}
