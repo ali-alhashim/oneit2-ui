@@ -42,7 +42,9 @@ export class Login {
      this.authService.login(badgeNumber, password).subscribe({
         next: (res) => {
           this.message.success(res.message || 'Login successful!');
+
           localStorage.setItem('user', JSON.stringify(res.user));
+          
           this.router.navigate(['/dashboard']);
         },
         error: () => {

@@ -13,7 +13,7 @@ export class AuthService {
   constructor(private http: HttpClient) { }
 
   login(badgeNumber:string, password:string ): Observable<any> {
-    return this.http.post(`${this.baseUrl}/login`, { badgeNumber, password });
+    return this.http.post(`${this.baseUrl}/login`, { badgeNumber, password },  { withCredentials: true });
   }
   
 }
